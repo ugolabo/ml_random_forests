@@ -1,6 +1,6 @@
-# Machine Learning with a Random Forests Model
+# *Machine Learning* avec des modèles de *Random Forests*; prédire l'obésité
 
-Machine Learning with a Random Forests model; predicting obesity
+Modèles de classification, modèles d'ensemble
 
 |  |  |
 |--|--|
