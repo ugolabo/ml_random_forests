@@ -10,7 +10,9 @@
 
 2. *Machine Learning*: définir les observations (lignes) et les *features* (colonnes), préparer les jeux de données d'entrainement pour alimenter des algorithmes supervisés de régression et de classification et des algorithmes non supervisés, normaliser et standardiser les données, tester les résultats avec des jeux de données de tests, visualiser les données et les résultats
 
-<img src="img/scikit_learn.jpg" alt="" width="500">
+|    |    |
+|:---|:---|
+| <img src="img/ml_algorithms.jpg" alt="" width="400">   | <img src="img/scikit_learn.jpg" alt="" width="400"> |
 
 5. *Deep Learning*: aborder des cas simples avec TensorFlow et Keras
 
