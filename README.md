@@ -20,6 +20,8 @@
 
 ## Projet avec des modèles de *Random Forests* (et plus)
 
+Consulter le README.md du projet pour plus de détails.
+
 Le projet utilise un modèle de classification, les *Random Forests*, pour déterminer si un individu est ou sera obèse à partir des métriques de son hygiène de vie. Le modèle est précédé d'une analyse exploratoire des *features* (corrélations, histogrammes, etc.).
 
 |    |    |
