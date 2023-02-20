@@ -6,15 +6,15 @@
 
 1. Science des données: faire une analyse de statistiques descriptives (tendance centrale, dispersion, extrêmes, intervalles, visualisation), préparer les données (rectifier la disposition, nettoyer ou remplacer les valeurs manquantes), modéliser les données avec des filtres, des tris, des pivots, etc. et pour faire des statistiques inférentielles (lois, distributions, extrapolation d'une population à partir d'un échantillon)
 
-<img src="img/numpy_stack.jpg" alt="" width="250">
+<img src="img/numpy_stack.jpg" alt="" width="300">
 
 2. *Machine Learning*: définir les observations (lignes) et les *features* (colonnes), préparer les jeux de données d'entrainement pour alimenter des algorithmes supervisés de régression et de classification et des algorithmes non supervisés, normaliser et standardiser les données, tester les résultats avec des jeux de données de tests, visualiser les données et les résultats
 
-<img src="img/scikit_learn.jpg" alt="" width="250">
+<img src="img/scikit_learn.jpg" alt="" width="300">
 
 5. *Deep Learning*: aborder des cas simples avec TensorFlow et Keras
 
-<img src="img/tensorflow_keras.jpg" alt="" width="250">
+<img src="img/tensorflow_keras.jpg" alt="" width="300">
 
 ## Projet avec des modèles de *Random Forests* (et plus)
 
