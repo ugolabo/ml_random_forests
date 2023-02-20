@@ -20,22 +20,29 @@
 
 ## Projet avec des modèles de *Random Forests* (et plus)
 
-Le projet utilise un modèle de classification, les *Random Forests*, pour déterminer si un individu est ou sera obèse à partir des métriques de son hygiène de vie. Le modèle est précédé d'une analyse exploratoire des *features* (corrélations, histogrammes, etc.) et de la cible (l'obésité multinomiale et binomiale; les hypothèses explicatives).
+Le projet utilise un modèle de classification, les *Random Forests*, pour déterminer si un individu est ou sera obèse à partir des métriques de son hygiène de vie. Le modèle est précédé d'une analyse exploratoire des *features* (corrélations, histogrammes, etc.).
 
 |    |    |
 |:---|:---|
 | <img src="img/correlation.jpg" alt="" width="400"> | <img src="img/histogrammes.jpg" alt="" width="400"> |
+
+L'analyse se poursuit sur la cible: l'obésité. Dans un modèle de classification, le cible peut être multinomiale ou binomiale. L'idée des de dériver des hypothèses explicatives.
+
+|    |    |
+|:---|:---|
 | <img src="img/obesite.jpg" alt="" width="400"> | <img src="img/obesite2.jpg" alt="" width="400"> |
 | <img src="img/obesite3.jpg" alt="" width="400"> | <img src="img/obesite4.jpg" alt="" width="400"> |
 
-Le modèle est entrainé avec des *features* principalement catégoriques comme des catégories de fréquences de consommation d'aliments hypercaloriques, de consommation de légumes avec les repas, de collations entre les repas, etc. La performance du modèle est aussi comparée à d'autres modèles de classification. Avec les *Random Forests*, il faut trouver le modèle le plus juste, mais optimiser le nombre d'arbres de décision (les *Random Forests* sont des modèles d'ensembles comptant plusieurs arbres décision).
+Le modèle est entrainé avec des *features* principalement catégoriques; comme des catégories de fréquences de consommation d'aliments hypercaloriques, de consommation de légumes avec les repas, de collations entre les repas, etc. Avec les *Random Forests*, il faut trouver le modèle qui maximise la justesse, mais qui optimise le nombre d'arbres de décision pour limiter le temps de calcul (les *Random Forests* sont des modèles d'ensembles comptant plusieurs arbres décision).
 
 |    |    |
 |:---|:---|
 | <img src="img/apprentissage.jpg" alt="" width="400"> | <img src="img/arbre.jpg" alt="" width="400"> |
 
-Finalement, le modèle est évalué et comparé à des modèles similaires avant d'être utilisé pour faire des prévision avec de nouvelles observations.
+Finalement, le modèle est évalué et en plus d'être comparé à d'autres modèles de classification.
 
 |    |    |
 |:---|:---|
 | <img src="img/confusion.jpg" alt="" width="400"> | <img src="img/apprentissage2.jpg" alt="" width="400"> |
+
+Le modèle peut être utilisé pour faire des prévision avec de nouvelles observations.
