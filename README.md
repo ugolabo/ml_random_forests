@@ -20,20 +20,22 @@
 
 ## Projet avec des modèles de *Random Forests* (et plus)
 
-Le projet utilise un modèle de classification, les *Random Forests*, pour déterminer si un individu est ou sera obèse à partir des métriques de son hygiène de vie. Le modèle est précédé d'une analyse exploratoire des données.
+Le projet utilise un modèle de classification, les *Random Forests*, pour déterminer si un individu est ou sera obèse à partir des métriques de son hygiène de vie. Le modèle est précédé d'une analyse exploratoire des *features* (corrélations, histogrammes, etc.) et de la cible (l'obésité multinomiale et binomiale; les hypothèses explicatives).
 
 |    |    |
 |:---|:---|
-| <img src="img/correlation.jpg" alt="" width="300"> | <img src="img/histogrammes.jpg" alt="" width="300"> |
+| <img src="img/correlation.jpg" alt="" width="400"> | <img src="img/histogrammes.jpg" alt="" width="400"> |
+| <img src="img/obesite.jpg" alt="" width="400"> | <img src="img/obesite2.jpg" alt="" width="400"> |
+| <img src="img/obesite3.jpg" alt="" width="400"> | <img src="img/obesite4.jpg" alt="" width="400"> |
 
-Le modèle est entrainé avec des *features* principalement catégoriques comme des catégories de fréquences de consommation d'aliments hypercaloriques, de consommation de légumes avec les repas, de collations entre les repas, etc. La performance du modèle est aussi comparée à d'autres modèles de classification. 
+Le modèle est entrainé avec des *features* principalement catégoriques comme des catégories de fréquences de consommation d'aliments hypercaloriques, de consommation de légumes avec les repas, de collations entre les repas, etc. La performance du modèle est aussi comparée à d'autres modèles de classification. Avec les *Random Forests*, il faut trouver le modèle le plus juste, mais optimiser les nombre d'arbres de décision (les *Random Forests* sont des modèles d'ensembles comptant plusieurs arbres décision). 
 
-obesite.jpg
-obesite2.jpg
-obesite3.jpg
-obesite4.jpg
+|    |    |
+|:---|:---|
+| <img src="img/apprentissage.jpg" alt="" width="400"> | <img src="img/arbre.jpg" alt="" width="400"> |
 
-apprentissage.jpg
-arbre.jpg
-confusion.jpg
-apprentissage.jpg
+Finalement, le modèle est évalué et comparé à des modèle similaires avant d'être utilisé pour faire des prévision avec de nouvelles observations.
+
+|    |    |
+|:---|:---|
+| <img src="img/confusion.jpg" alt="" width="400"> | <img src="img/apprentissage.jpg" alt="" width="400"> |
