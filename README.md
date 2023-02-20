@@ -12,7 +12,7 @@
 
 <img src="img/ml_algorithms.jpg" alt="" width="600">
 
-<img src="img/scikit_learn.jpg" alt="" width="400">
+<img src="img/scikit_learn.jpg" alt="" width="600">
 
 5. *Deep Learning*: aborder des cas simples avec TensorFlow et Keras
 
