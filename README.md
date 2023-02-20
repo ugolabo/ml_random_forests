@@ -16,7 +16,7 @@
 
 5. *Deep Learning*: aborder des cas simples avec TensorFlow et Keras
 
-<img src="img/tensorflow_keras.jpg" alt="" width="400">
+<img src="img/tensorflow_keras.jpg" alt="" width="500">
 
 ## Projet avec des modèles de *Random Forests* (et plus)
 
