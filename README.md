@@ -38,4 +38,4 @@ Finalement, le modèle est évalué et comparé à des modèle similaires avant 
 
 |    |    |
 |:---|:---|
-| <img src="img/confusion.jpg" alt="" width="400"> | <img src="img/apprentissage.jpg" alt="" width="400"> |
+| <img src="img/confusion.jpg" alt="" width="400"> | <img src="img/apprentissage2.jpg" alt="" width="400"> |
