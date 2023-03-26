@@ -3,7 +3,7 @@
 **Objectif:** maitriser les fondements de la science des données comme phase exploratoire et analytique d'un projet de *Machine Learning*.
 
 [Projet](#projet-avec-des-mod%C3%A8les-de-random-forests-et-plus) avec des modèles de forêts aléatoire (*Random Forests* et plus) à la toute fin.  
-Le projet a été **bonifier**, puis mis en [production avec Streamlit](https://ugolabo-ml-random-forests-st-01-modele-widb6v.streamlit.app/).
+Le projet a été **bonifier**, puis mis en [production avec Streamlit](https://ugolabo-ml-random-forests-st-01-modele-widb6v.streamlit.app/) (consulter le site avec le bouton droit).
 
 1. Science des données: faire une analyse de statistiques descriptives (tendance centrale, dispersion, extrêmes, intervalles, visualisation), préparer les données (rectifier la disposition, nettoyer ou remplacer les valeurs manquantes), modéliser les données avec des filtres, des tris, des pivots, etc. et pour faire des statistiques inférentielles (lois, distributions, extrapolation d'une population à partir d'un échantillon)
 
