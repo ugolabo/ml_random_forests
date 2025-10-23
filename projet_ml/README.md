@@ -1,4 +1,4 @@
-## Structure
+## Mise en place et structure
 
 - 1 notebook ('nb_v3.ipynb') de Science des données.
     - 1 code source ('nettoyage_donnees.py') pour rectifier et nettoyer les données en préparation à l'analyse avec le notebook.
