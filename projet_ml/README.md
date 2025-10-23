@@ -1,27 +1,21 @@
-# Random Forests, Forêts aléatoires
+## Structure
 
-Construire un modèle qui permet de prédire si un individu est ou sera obèse à partir des métriques de son hygiène de vie.
-
-C'est une classification binomiale: 0, non obèse ou 1, obèse.
-
-Il faut d'abord entrainer le modèle avec des données d'individus dont on connait le poids, l'Indice de Masse Corporelle (qui permet de le qualifier d'obèse ou non) et d'autres métriques de leur hygiène de vie.
-
-## Fichiers
-
-- 1 notebook:
-- 2 codes sources:
-    - `rf_classification.py` comporte une classe pour faire une prédiction
-    - `main.py` utilise le fichier précédent et sa classe pour faire une prédiction
-- 1 fichier Excel: `questionnaire.xlsx` permet d'entrer des données et alimenter `rf_classification.py` 
-- 1 dossier data: pour les données d'origine (CSV) et les données nettoyées  (PKL) pour l'entrainement du modèle
-- 1 dossier img: pour les images
+- 1 notebook ('nb_v3.ipynb') de Science des données.
+    - 1 code source ('nettoyage_donnees.py') pour rectifier et nettoyer les données en préparation à l'analyse avec le notebook.
+- 1 dossier 'data' : pour les données d'origine (CSV) et les données nettoyées (format Pickle) pour l'entrainement du modèle. Le fichier CSV alimente 'nettoyage_donnees.py' et ce dernier produit le fichier Pickle.
+- 1 dossier 'modele' : pour sauvegarder le modele en format Pickle. Le format Pickle permet d'implanter le modèle dans une application comme Streamlit comme si le modèle devenait un petit logiciel pour traiter de nouvelles données et faire des prévisions. Le dossier contient aussi une sauvegarde en format Pickle du scaler utilisé avant l'entrainement du modèle pour normaliser, standardiser les distributions des features. Les modèles de Random Forests ne sont pas sensibles aux grandes variances et aux disparités de variances entre feature (un feature avec beaucoup de variance qui marginalise la contribution au modèle d'un autre feature avec peu de variance). Un scaler permet d'obtenir un jeu de données d'entrainement pour mettre sur le même pied d'égalité des modèles plus sensibles aux écarts de variances avec les Random Forests moins sensibles aux écarts de variance.
+- 2 codes sources :
+    - `rf_classification.py` : comporte une classe pour faire une prédiction
+    - `main.py` : utilise le fichier précédent et sa classe pour faire une prédiction
+- 1 fichier Excel : `questionnaire.xlsx` permet d'entrer des données et alimenter `rf_classification.py` pour faire une prédiction.
+- 1 dossier 'img' : pour les images.
 
 ## Sources
 
-Jeu de données disponible sur diverses plateformes:
+Jeu de données disponible sur diverses plateformes :
 
-- Kaggle:  https://www.kaggle.com/code/mpwolke/obesity-levels-life-style/notebook
-- Github: https://github.com/zeglam/Obesity_Levels_Analysis
+- Kaggle :  https://www.kaggle.com/code/mpwolke/obesity-levels-life-style/notebook
+- Github : https://github.com/zeglam/Obesity_Levels_Analysis
 
 Les données accompagnent un article scientifique repris dans divers journaux:
 
@@ -29,7 +23,7 @@ Les données accompagnent un article scientifique repris dans divers journaux:
 	- Science Direct,  https://www.sciencedirect.com/science/article/pii/S2352340919306985
 	- etc.
 
-Le projet est inspiré de d'analyses, de visualisations sur des enjeux de santé publique à partir de facteurs socio-économique: https://www.gapminder.org/data/
+Le projet est inspiré de d'analyses, de visualisations sur des enjeux de santé publique à partir de facteurs socio-économique : https://www.gapminder.org/data/
 
 ## Données d'origine et données utilisées
 
@@ -47,15 +41,15 @@ Consulter:  https://machinelearningknowledge.ai/categorical-data-encoding-with-s
 
 Il faut donc créer un équivalent numérique (discret ou entier) dans une autre colonne. Par exemple, `femme`-`homme` devient `0`-`1`, `jamais`, `parfois`, `souvent` deviennent `0`, `1`, `2` et  `moins 1 litre`, `1–2 litres`, `plus 2 litres` deviennent `1`, `2`, `3`.
 
-Consulter:   https://stackoverflow.com/questions/38088652/pandas-convert-categories-to-numbers
+Consulter : https://stackoverflow.com/questions/38088652/pandas-convert-categories-to-numbers
 
 Parfois, il n'y a pas d'ordre dans le feature, mais plusieurs catégories non ordinales ou des données qualificatives (`Automobile`, `Motorbike`, `Bike`, etc). Il faut encoder chaque catégorie dans de nouvelle colonnes de données binaires numériques ( `0`-`1`). 5 qualitatifs donnent 5 nouvelles colonnes. À chaque observation, une seule des 5 colonnes montre `1` dans la colonne du transport désigné et les autres montrent `0`.
 
-Consulter: https://datagy.io/sklearn-random-forests
+Consulter : https://datagy.io/sklearn-random-forests
 
 Le type `category` est un compromis entre le type `object` et un type numérique, car il permet de faire des calculs tout en affichant des chaines de caractères.
 
-Consulter:
+Consulter :
 
 - https://pandas.pydata.org/pandas-docs/stable/user_guide/categorical.html#differences-to-r-s-factor
 - https://pandas.pydata.org/pandas-docs/stable/user_guide/categorical.html
@@ -66,7 +60,7 @@ Certains graphiques fonctionnent très bien avec les données catégoriques. Le 
 
 Le fichier CSV d'origine est traité et enrichi. Le résultat est sauvegardé dans un format Pickle (binaire) qui permet de préserver le `DataFrame` et ses types.
 
-Consulter: 
+Consulter : 
 
 - https://datascienceparichay.com/article/save-pandas-dataframe-to-a-pickle-file/
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_pickle.html
