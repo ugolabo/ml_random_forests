@@ -2,7 +2,7 @@
 
 Le projet est une suite d'étapes pour mettre en production un modèle de Machine Learning avec Python. Le modèle doit prédire la propension à l'obésité. Le modèle apprend que l'Indice de Masse Corporelle (IMC) est relié à des facteurs de vie (alimentation, activité, habitudes, etc.). L'hygiène de vie mène à l'obésité ou non. Ces mêmes facteurs servent ensuite à classer si un individu sera obèse à long terme.
 
-<img src="img/arbre.jpg" alt="" width="800px">
+<img src="img/arbre.jpg" alt="" width="400px">
 
 L'IMC est une variable continue. On peut établir des catégories. Un poids normal se situe entre 18.5 et 24.9 et l'obésité commence à 30.0. Entre les deux se trouve le surpoids. Deux individus, un à 31.0 et l'autre à 35.0 sont dans la catégorie Obèse. Le premier individu est aussi dans la sous-catégorie Obèse Classe I alors que le deuxième individu est dans la sous-catégorie Obèse Classe II. La catégorie Surpoids se subdivise aussi en sous-catégories.
 
