@@ -39,9 +39,9 @@ Consulter les dépôts pour le déploiement du modèle avec Streamlit et les app
 ### Machine Learning
 
 1. Définir les features (colonnes) et les observations (lignes).
-2. Préparer les jeux de données d'entrainement, normaliser et standardiser les données. Cette étape débouche sur la **sauvegarde des scalers**.
+2. Préparer les jeux de données d'entrainement, normaliser et standardiser les données. Cette étape débouche sur la **sauvegarde de scalers**.
     - Normaliser signifie recentrer la distribution de chaque feature en suivant la Loi Normale de sorte que chaque feature ait une moyenne assez similaire. Seule la variance est différente. Ce qui évite qu'un feature avec de larges variances absolues (-1M à 1M) marginalise un autre feature avec de petites variances absolues (-10 à 10). Après normalisation, les deux features se comparent avec des variances relatives avec une moyenne de 0 et une variance autour de 0.
-    - Standardiser suit les principes de la normalisation, mais concentre plutôt la variance de chaque featur dans une échelle de 0 à 1.
+    - Standardiser suit les principes de la normalisation, mais concentre plutôt la variance de chaque feature dans une échelle de 0 à 1.
 4. Explorer les possibilités de modèles avant de converger : choix d'un modèle supervisé et de classification.
 
 <img src="img/ml_algorithms.jpg" alt="" width="600">
