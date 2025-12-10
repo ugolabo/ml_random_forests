@@ -12,9 +12,9 @@ On classe l'IMC en catégories : poids insuffisant, poids normal, surpoids de ni
 
 On peut aussi regrouper les classes obésité pour obtenir un classement binomial ; à deux catégories : non obèse ou obèse.
 
-On entraine le modèle à établir un lien entre une catégorie d'IMC et des facteurs de vie (alimentation, activité, habitudes, etc.) chez des individus. Les facteurs de vie sont les features, les variables explicatives, les variables indépendantees ou x. Chaque individu est une observation ou ligne de données. La variable cible, la variable dépendante ou y est la catégorie d'IMC. L'hygiène de vie détermine la catégorie d'IMC.
+On entraine le modèle à établir un lien entre une catégorie d'IMC et des facteurs de vie (alimentation, activité, habitudes, etc.) chez des individus. Les facteurs de vie sont les features, les variables explicatives, les variables indépendantes ou x. Chaque individu est une observation ou ligne de données. La variable cible, la variable dépendante ou y est la catégorie d'IMC. L'hygiène de vie détermine la catégorie d'IMC.
 
-Avec de nouvelles données (de nouveaux individus et leur facteurs de vie), le modèle prédit la catégorie d'IMC de l'individu. La version multinomiale prédit une des 7 catégories. La version binomiale prédit une des 2 catégories.
+Avec de nouvelles données (de nouveaux individus et leurs facteurs de vie), le modèle prédit la catégorie d'IMC de l'individu. La version multinomiale prédit une des 7 catégories. La version binomiale prédit une des 2 catégories.
 
 ## Mise en place et structure
 
