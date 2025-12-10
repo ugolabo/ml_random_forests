@@ -4,8 +4,6 @@ Le projet est une suite d'étapes (MLOps) pour entrainer un modèle de Machine L
 
 <img src="img/arbre.jpg" alt="" width="300px">
 
-
-
 ## Origine du projet
 
 L'obésité peut être mesurée avec l'Indice de Masse Corporelle (IMC). L'IMC est une valeur continue.
@@ -40,9 +38,11 @@ Consulter les dépôts pour le déploiement du modèle avec Streamlit et les app
 
 ### Machine Learning
 
-1. Définir les observations (lignes) et les features (colonnes, variables ou facteurs).
-2. Préparer les jeux de données d'entrainement, normaliser et standardiser les données.
-3. Explorer les possibilités de modèles avant de converger : choix d'un modèle supervisé et de classification.
+1. Définir les features (colonnes) et les observations (lignes).
+2. Préparer les jeux de données d'entrainement, normaliser et standardiser les données. Cette étape débouche sur la **sauvegarde des scalers**.
+    - Normaliser signifie recentrer la distribution de chaque feature en suivant la Loi Normale de sorte que chaque feature ait une moyenne assez similaire. Seule la variance est différente. Ce qui évite qu'un feature avec de larges variances absolues (-1M à 1M) marginalise un autre feature avec de petites variances absolues (-10 à 10). Après normalisation, les deux features se comparent avec des variances relatives avec une moyenne de 0 et une variance autour de 0.
+    - Standardiser suit les principes de la normalisation, mais concentre plutôt la variance de chaque featur dans une échelle de 0 à 1.
+4. Explorer les possibilités de modèles avant de converger : choix d'un modèle supervisé et de classification.
 
 <img src="img/ml_algorithms.jpg" alt="" width="600">
 
@@ -66,6 +66,6 @@ Avec les Random Forests, il faut trouver le modèle qui maximise la justesse (ac
 | <img src="img/arbre.jpg" alt="" width="400"> | <img src="img/apprentissage.jpg" alt="" width="400"> |
 | <img src="img/confusion.jpg" alt="" width="400"> | <img src="img/apprentissage2.jpg" alt="" width="400"> |
 
-Finalement, une configuration du modèle est retenue. Ce modèle est entrainé, évalué et sauvegardé pour être utilisé en production (faire des prévisions avec de nouvelles observations).
+Finalement, une configuration du modèle est retenue. Ce modèle est entrainé, évalué et **sauvegardé pour être utilisé en production** (faire des prévisions avec de nouvelles observations).
 
 Consulter le README dans le dossier du projet pour plus de détails.
