@@ -4,7 +4,7 @@ Le projet est une suite d'étapes (MLOps) pour entrainer un modèle de Machine L
 
 <img src="img/arbre.jpg" alt="" width="300px">
 
-Consulter les dépôts pour le déploiement du modèle avec Streamlit et les apps interactives : **ml_random_forests_streamlit** et **apps_streamlit**.
+
 
 ## Origine du projet
 
@@ -20,7 +20,9 @@ Avec de nouvelles données (de nouveaux individus et leur facteurs de vie), le m
 
 ## Mise en place et structure
 
-Ce sont les étapes (MLOps) qui permettent d'arriver à la sauvegarde d'un scaler et d'un modèle en format Pickle. Cette sauvegarde permet de pousuivre avec les étapes manquantes du MLOps : le déploiement du modèle. C'est l'objet des dépôts : **ml_random_forests_streamlit** et **apps_streamlit**.
+Ce sont les étapes (MLOps) qui permettent d'arriver à la sauvegarde d'un scaler et d'un modèle en format Pickle. Cette sauvegarde permet de pousuivre avec les étapes manquantes du MLOps : le déploiement du modèle.
+
+Consulter les dépôts pour le déploiement du modèle avec Streamlit et les apps interactives : **ml_random_forests_streamlit** et **apps_streamlit**.
 
 ### Science des données
 
