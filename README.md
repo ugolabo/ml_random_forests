@@ -1,16 +1,26 @@
 # Machine Learning avec Random Forests
 
-Le projet est une suite d'étapes pour mettre en production un modèle de Machine Learning avec Python. Le modèle doit prédire la propension à l'obésité. Le modèle apprend que l'Indice de Masse Corporelle (IMC) est relié à des facteurs de vie (alimentation, activité, habitudes, etc.). L'hygiène de vie mène à l'obésité ou non. Ces mêmes facteurs servent ensuite à classer si un individu sera obèse à long terme.
+Le projet est une suite d'étapes (MLOps) pour entrainer un modèle de Machine Learning avec Python. Le modèle prédit la propension à l'obésité.
 
-<img src="img/arbre.jpg" alt="" width="400px">
+<img src="img/arbre.jpg" alt="" width="300px">
 
-L'IMC est une variable continue. On peut établir des catégories. Un poids normal se situe entre 18.5 et 24.9 et l'obésité commence à 30.0. Entre les deux se trouve le surpoids. Deux individus, un à 31.0 et l'autre à 35.0 sont dans la catégorie Obèse. Le premier individu est aussi dans la sous-catégorie Obèse Classe I alors que le deuxième individu est dans la sous-catégorie Obèse Classe II. La catégorie Surpoids se subdivise aussi en sous-catégories.
+Consulter les dépôts pour le déploiement du modèle avec Streamlit et les apps interactives : **ml_random_forests_streamlit** et **apps_streamlit**.
 
-Le modèle est entrainé en deux versions. La version binomiale (basée sur l'échelle des catégorie; Non Obèse (0) ou Obèse (1)) et la version multinomiale (basée sur l'échelle des sous-catégories).
- 
-Un autre repo est dédié à la mise en production des deux versions du modèle avec Streamlit.
+## Origine du projet
+
+L'obésité peut être mesurée avec l'Indice de Masse Corporelle (IMC). L'IMC est une valeur continue.
+
+On classe l'IMC en catégories : poids insuffisant, poids normal, surpoids de niveau I, surpoids de niveau II, obésité de type I, obésité type de II, obésité type de III. Les classements varient, mais ce sont des classements multinomiaux ; à plusieurs catégories.
+
+On peut aussi regrouper les classes obésité pour obtenir un classement binomial ; à deux catégories : non obèse ou obèse.
+
+On entraine le modèle à établir un lien entre une catégorie d'IMC et des facteurs de vie (alimentation, activité, habitudes, etc.) chez des individus. Les facteurs de vie sont les features, les variables explicatives, les variables indépendantees ou x. Chaque individu est une observation ou ligne de données. La variable cible, la variable dépendante ou y est la catégorie d'IMC. L'hygiène de vie détermine la catégorie d'IMC.
+
+Avec de nouvelles données (de nouveaux individus et leur facteurs de vie), le modèle prédit la catégorie d'IMC de l'individu. La version multinomiale prédit une des 7 catégories. La version binomiale prédit une des 2 catégories.
 
 ## Mise en place et structure
+
+Ce sont les étapes (MLOps) qui permettent d'arriver à la sauvegarde d'un scaler et d'un modèle en format Pickle. Cette sauvegarde permet de pousuivre avec les étapes manquantes du MLOps : le déploiement du modèle. C'est l'objet des dépôts : **ml_random_forests_streamlit** et **apps_streamlit**.
 
 ### Science des données
 
