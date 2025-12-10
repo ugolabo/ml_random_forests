@@ -18,7 +18,7 @@ Avec de nouvelles données (de nouveaux individus et leurs facteurs de vie), le 
 
 ## Mise en place et structure
 
-Ce sont les étapes (MLOps) qui permettent d'arriver à la sauvegarde d'un scaler et d'un modèle en format Pickle. Cette sauvegarde permet de pousuivre avec les étapes manquantes du MLOps : le déploiement du modèle.
+Ce sont les étapes (MLOps) qui permettent d'arriver à la **sauvegarde de scalers et de modèles en format Pickle**. Cette sauvegarde permet de pousuivre avec les étapes manquantes du MLOps : le déploiement du modèle.
 
 Consulter les dépôts pour le déploiement du modèle avec Streamlit et les apps interactives : **ml_random_forests_streamlit** et **apps_streamlit**.
 
