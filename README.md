@@ -68,4 +68,4 @@ Avec les Random Forests, il faut trouver le modèle qui maximise la justesse (ac
 
 Finalement, une configuration du modèle est retenue. Ce modèle est entrainé, évalué et **sauvegardé pour être utilisé en production** (faire des prévisions avec de nouvelles observations).
 
-Consulter le README dans le dossier du projet pour plus de détails.
+Consulter le README dans le sous-répertoire du projet pour plus de détails.
