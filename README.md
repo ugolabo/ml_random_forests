@@ -18,15 +18,27 @@ Avec de nouvelles données (de nouveaux individus et leurs facteurs de vie), le 
 
 ## Mise en place et structure
 
-Ce sont les étapes (MLOps) qui permettent d'arriver à la **sauvegarde de scalers et de modèles en format Pickle**. Cette sauvegarde permet de pousuivre avec les étapes manquantes du MLOps : le déploiement du modèle.
+Ce sont les étapes (MLOps) qui permettent d'arriver à la **sauvegarde de données, d'un scaler et de modèles en format Pickle**. Cette sauvegarde permet de pousuivre avec les étapes manquantes du MLOps : le déploiement du modèle.
 
 Consulter les dépôts pour le déploiement du modèle avec Streamlit et les apps interactives : **ml_random_forests_streamlit** et **apps_streamlit**.
+
+Tous les fichiers nommés dans le étapes qui suivrent se retrouvent dans dossier 'projet_ml/' de ce dépôt. Consulter le README dans le dossier.
+
+### Nettoyage des données
+
+1. Exécuter le code source 'nettoyage_donnee.py'.
+    - Le code source agit comme un ETL (Extract-Transform-Load).
+    - Les données d'origine en CSV dans 'data/' sont importées, nettoyées, puis sauvegardées en Pickle. 
+1. Préparer les données : rectifier, convertir, nettoyer ou remplacer les valeurs manquantes.
 
 ### Science des données
 
 <img src="img/numpy_stack.jpg" alt="" width="300">
 
-1. Préparer les données : importer les données, rectifier la disposition du `DataFrame` de large à long (pivot), nettoyer ou remplacer les valeurs manquantes.
+1. Exécuter les notebooks 'nb_v3.ipynb' et 'nb_v4.ipynb'.
+    - Les v1 à v2 étaient exploratoires. Ils n'ont pas été retenus. Une partie a donnée l'étape précédente, mais en code source. L'autre partie a donnée le notebook v3.
+    - v3 est plus long que v4, car il est expérimental.
+    - v4 reprend une partie de v3 et va à l'essentiel. C'est le notebook qui sauvegarde les modèles et le scaler en Pickle.
 1. Faire une analyse de statistiques descriptives : tendance centrale, dispersion, distribution, valeurs extrêmes, corrélations, visualisation.
 1. Manipuler les données : filtres ou extractions conditionnelles, tris, visualisation, etc.
 
@@ -39,10 +51,12 @@ Consulter les dépôts pour le déploiement du modèle avec Streamlit et les app
 ### Machine Learning
 
 1. Définir les features (colonnes) et les observations (lignes).
-2. Préparer les jeux de données d'entrainement, normaliser et standardiser les données. Cette étape débouche sur la **sauvegarde de scalers**.
-    - Normaliser signifie recentrer la distribution de chaque feature en suivant la Loi Normale de sorte que chaque feature ait une moyenne assez similaire. Seule la variance est différente. Ce qui évite qu'un feature avec de larges variances absolues (-1M à 1M) marginalise un autre feature avec de petites variances absolues (-10 à 10). Après normalisation, les deux features se comparent avec des variances relatives avec une moyenne de 0 et une variance autour de 0.
-    - Standardiser suit les principes de la normalisation, mais concentre plutôt la variance de chaque feature dans une échelle de 0 à 1.
-4. Explorer les possibilités de modèles avant de converger : choix d'un modèle supervisé et de classification.
+2. Préparer les jeux de données d'entrainement, normaliser ou standardiser les données. Cette étape débouche sur la **sauvegarde d'un scaler**.
+    - Normaliser ou standardiser est une transformation des features. Cette transformation nivelle les grandes différences de variance. Ce qui évite qu'un feature avec une large variance absolue (-1M à 1M) ne marginalise un autre feature avec une petite variance absolue (-10 à 10) dans l'entrainement d'un modèle.
+    - StandardScaler transforme les features en forçant chaque moyenne à 0. La variance de chaque feature se limite à la fourchette -1 et 1 (autour de la moyenne). Si un feature est très variable, il reste très variable entre -1 et 1. Si un feature est plus stable, sa variance démontre cette stabilité dans la fourchette -1 et 1. La variance des features est alors comparable.
+    - MinMaxScaler transforme les feature en forçant la variance dans une fourchette de 0 et 1.
+    - Il existe une panoplie de scalers. Chaque scaler s'applique en fonction d'une configuration de données. Par exemple, en présence de données non normales (Loi Normale) ou non paramétriques, de données avec beaucoup d'outliers qui biaisent la moyenne, là où la médiane et l'IQR sont moins influencés par les outliers, RobustScaler est plus approprié.
+4. Explorer les possibilités de modèles avant de converger : choix d'un modèle supervisé et de classification. 
 
 <img src="img/ml_algorithms.jpg" alt="" width="600">
 
