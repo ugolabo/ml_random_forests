@@ -51,27 +51,27 @@ Tous les fichiers nommés dans le étapes qui suivrent se retrouvent dans dossie
 ### Machine Learning
 
 1. Définir les features (colonnes) et les observations (lignes).
-2. Préparer les jeux de données d'entrainement, normaliser ou standardiser les données. Cette étape débouche sur la **sauvegarde d'un scaler**.
+1. Préparer les jeux de données d'entrainement, normaliser ou standardiser les données. Cette étape débouche sur la **sauvegarde d'un scaler**.
     - Normaliser ou standardiser est une transformation des features. Cette transformation nivelle les grandes différences de variance. Ce qui évite qu'un feature avec une large variance absolue (-1M à 1M) ne marginalise un autre feature avec une petite variance absolue (-10 à 10) dans l'entrainement d'un modèle.
     - StandardScaler transforme les features en forçant chaque moyenne à 0. La variance de chaque feature se limite à la fourchette -1 et 1 (autour de la moyenne). Si un feature est très variable, il reste très variable entre -1 et 1. Si un feature est plus stable, sa variance démontre cette stabilité dans la fourchette -1 et 1. La variance des features est alors comparable.
     - MinMaxScaler transforme les feature en forçant la variance dans une fourchette de 0 et 1.
     - Il existe une panoplie de scalers. Chaque scaler s'applique en fonction d'une configuration de données. Par exemple, en présence de données non normales (Loi Normale) ou non paramétriques, de données avec beaucoup d'outliers qui biaisent la moyenne, là où la médiane et l'IQR sont moins influencés par les outliers, RobustScaler est plus approprié.
-4. Explorer les possibilités de modèles avant de converger : choix d'un modèle supervisé et de classification. 
+1. Explorer les possibilités de modèles avant de converger : choix d'un modèle supervisé et de classification. 
 
 <img src="img/ml_algorithms.jpg" alt="" width="600">
 
 <img src="img/scikit_learn.jpg" alt="" width="600">
 
-4. Sélectionner un modèle de classification
+1. Sélectionner un modèle de classification
     - Un modèle de régression logistique est simple et rapide à entrainer. Ce modèle se montre sensible aux données et aux transformations des données d'entrainement ; il souffre de problèmes de biais élevé.
-    - Un modèle d'arbre de décision est sensible aux petites variations dans les données d'entrainement. Un léger changement peut entrainer un arbre et une prédiction complètement différents. L'arbre échoue aussi à généraliser avec de nouvelles données, car il a cette tendance au surapprentissage (overfitting).
+    - Un modèle d'arbre de décision simple est sensible aux petites variations dans les données d'entrainement. Un léger changement peut entrainer un arbre et une prédiction complètement différents. L'arbre échoue aussi à généraliser avec de nouvelles données, car il a cette tendance au surapprentissage (overfitting).
     - Les modèles d'ensembles sont de meilleures options.
         - Les modèles de boosting (XGBoost, LightGBM) évitent le surapprentissage et réduisent les biais avec des techniques de régularisation et de sous-échantillonnage, par exemple.
         - Les modèles de stacking corrigent les problèmes en combinant les forces de plusieurs types de modèles (par exemple, un arbre de décision, une régression logistique, un autre arbre de décision), évitant qu'un seul modèle ne dicte la prédiction finale et offrant un meilleur pouvoir prédictif global.
         - Les modèles de bagging (Random Forests) ressemblent aux modèles de stacking, mais uniquement un stack d'arbres.
-5. Choisir un modèle de Random Forests (modèle d'ensembles de type bagging). Ce sont des modèles simples à maitriser, simples à interpréter, rapide à entrainer et peu intensif en ressources.
-5. Entrainer différentes versions.
-6. Tester les résultats avec des jeux de données de tests, visualiser les données et les résultats.
+1. Choisir un modèle de Random Forests (modèle d'ensembles de type bagging). Ce sont des modèles simples à maitriser, simples à interpréter, rapide à entrainer et peu intensif en ressources.
+1. Entrainer différentes versions.
+1. Tester les résultats avec des jeux de données de tests, visualiser les données et les résultats.
 
 Avec les Random Forests, il faut trouver le modèle qui maximise la justesse (accuracy), mais qui optimise le nombre d'arbres de décision. Le score de justesse avec les données de test converge à 94% passé un ensemble de 23 estimateurs ou arbres (le premier arbre de décision est illustré). 125 à 150 estimateurs sont les nombres d'arbres optimaux pour obtenir un score de 94% tout en limitant le temps d'entrainement.
 
